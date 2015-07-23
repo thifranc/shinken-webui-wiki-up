@@ -48,6 +48,8 @@ An icon on top left of this view allows to go back to Dashboard page. Another ic
 
 ## Dashboard widgets
 
+**This documentation part is to be developed ...**
+
 ### Worldmap widget
  Displays the map of the current hosts.
 
