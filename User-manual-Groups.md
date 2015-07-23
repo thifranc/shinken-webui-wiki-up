@@ -5,7 +5,7 @@ Each hosts group contains information about the Up, Unreachable, Down and Unknow
 
 Hovering a group allows to switch to the details or minemap view for the group.
 
-![Hosts groups page](./Capture03.JPG "Hosts groups")
+![Hosts groups page](Capture03.JPG "Hosts groups")
 
 Groups are logical hosts grouping.
 
