@@ -18,7 +18,7 @@ $ shinken install webui
 
 The configuration file (*webui.cfg*) is located in the *etc/shinken/modules* directory and is self explanatory.
 
-More details for installing and configuration [on this page](https://github.com/mohierf/mod-webui/wiki/Installing-and-configuring-Shinken-WebUI).
+More details for installing and configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-and-configuring-Shinken-WebUI).
 
 ## Installing authentication modules
 
@@ -26,16 +26,16 @@ The WebUI uses external modules to lookup your user password and allow/deny acce
 
 By default it is using the auth-cfg-password module, which will look into your contact definition for the password parameter. 
 
-More information about authentication modules and their installation/configuration [on this page](https://github.com/mohierf/mod-webui/wiki/Installing-WebUI-authentication-modules).
+More information about authentication modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules).
 
 ## Installing user's preferences modules
 
 The WebUI is self sufficient to store common and user's preferences: dashboard, default parameters, ... It uses files to store the user's preferences. It is whenever possible to store user preferences in a MongoDB or Sqlite database.
 
-More information about storage modules and their installation/configuration [on this page](https://github.com/mohierf/mod-webui/wiki/Installing-WebUI-storage-modules).
+More information about storage modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-storage-modules).
 
 ## Metrology graph modules
 
 You can link the WebUI so it will contextually display graphs from other tools, like PNP4Nagios or Graphite. All you need is to install and configure a graphing module.
 
-More information about graphing modules and their installation/configuration [on this page](https://github.com/mohierf/mod-webui/wiki/Installing-WebUI-graph-modules).
+More information about graphing modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-graph-modules).

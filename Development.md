@@ -1,7 +1,7 @@
 
 ## Application design and architecture
 
- Some information about application design [in this document](https://github.com/mohierf/mod-webui/wiki/Design).
+ Some information about application design [in this document](https://github.com/shinken-monitoring/mod-webui/wiki/Design).
 
 ## Contributing
 

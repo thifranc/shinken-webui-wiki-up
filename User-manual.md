@@ -14,7 +14,7 @@ This document assumes that the reader is aware of the monitoring behavior and is
 
 On the application login page, log in with the provided username and password. If the credentials are accepted and access is granted, the user is relocated on the Web UI main page. 
 
-<img src="https://raw.githubusercontent.com/wiki/mohierf/mod-webui/01.jpg" width="768">
+<img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/01.jpg" width="768">
 
 ## Application main page
 
@@ -25,7 +25,7 @@ The application main page is built upon a layout made of:
 - a left side area, containig a user menu to navigate among the application pages
 - a footer area, including the version and legals
 
-<img src="https://raw.githubusercontent.com/wiki/mohierf/mod-webui/02.jpg" width="768">
+<img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/02.jpg" width="768">
 
 The footer is solely intended for information about the current application version and copyright, and do not have any other function.
 
@@ -46,30 +46,30 @@ The header area on top of page contains:
 - an indicator icon for the page refresh status
 - the connected user information / settings
 
-> The filtering feature of the header bar is developed in [the Problems chapter](https://github.com/mohierf/mod-webui/wiki/User-manual-Problems).
+> The filtering feature of the header bar is developed in [the Problems chapter](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Problems).
 
 Clicking on the application logo pops up a modal box that contains informations about the current application version and Shinken version.
 
 ### Sidebar menu
 
 The sidebar menu is organised as is:
-- Dashboard, main application page, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-Dashboard)
-- Problems, the current problems view, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-Problems)
-- Groups and tags, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-Groups):
+- Dashboard, main application page, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Dashboard)
+- Problems, the current problems view, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Problems)
+- Groups and tags, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Groups):
   - Hosts groups
   - Services groups
   - Hosts tags
   - Services tags
-- Tactical views, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-Tactical-views):
+- Tactical views, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Tactical-views):
   - Impacts
   - Minemap
   - World map
   - Wall
-- System, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-System):
+- System, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-System):
   - Configuration
   - Status
   - Logs
-- Configuration, [described here](https://github.com/mohierf/mod-webui/wiki/User-manual-Configuration):
+- Configuration, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Configuration):
   - Contacts
   - Commands
   - Timeperiods

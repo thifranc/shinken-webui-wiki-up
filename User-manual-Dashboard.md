@@ -20,7 +20,7 @@ The current impacts shows how many impacts are currently present (and related to
 
 The page layout is made of a three-columns grid taht receives some widgets. Widgets may be chosen by the logged in user. The chosen widgets and their configuration is part of the user's preferences and will be stored if a storage module is configured.
 
- <img src="https://raw.githubusercontent.com/wiki/mohierf/mod-webui/02.jpg" width="768">
+ <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/02.jpg" width="768">
 
  To add a widget on the dashboard page, click on "Add a new widget" and then choose the desired widget. Some widgets may be configured if the widget top bar contain an edit icon. Widgets are collapsible when clicking on the up arrow in the top. They may be removed when clicking on the trash bin in the top bar.
 
@@ -37,7 +37,7 @@ The page layout is made of a three-columns grid taht receives some widgets. Widg
 
  The bottom area displays the current IT problems and the current impacts. For IT problems, number of hosts problems and services problems are displayed on a background color indicating the worst state.
 
-<img src="https://raw.githubusercontent.com/wiki/mohierf/mod-webui/32.jpg" width="768">
+<img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/32.jpg" width="768">
 
 An icon on top left of this view allows to go back to Dashboard page. Another icon allows to switch to toggle browser to fullscreen mode (if your browser support this feature).
 

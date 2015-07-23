@@ -166,7 +166,7 @@ define module {
 - remote_user_enable        1
 
 ## Modules 
- *modules* parameter allows to declare the available modules to the application. For more information, see [configuring the application.](https://github.com/mohierf/mod-webui/wiki/Configuration)
+ *modules* parameter allows to declare the available modules to the application. For more information, see [configuring the application.](https://github.com/shinken-monitoring/mod-webui/wiki/Configuration)
 
 
 ## Directories
@@ -181,7 +181,7 @@ define module {
 
  The company logo is searched in *photos_dir* as a file named *default_company.png*. If not found, the application uses its own logo: 
 
- <img src="https://raw.githubusercontent.com/wiki/mohierf/mod-webui/logo_very_small.png" width="128">
+ <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/logo_very_small.png" width="128">
 
    
  When loading its plugins, the application scans the additional plugins directory (*additional_plugins_dir*) to load extra plugins. The scanning for this directory occurs before the modules loading and the Web UI plugins loading. As of it, the extra plugins will have the lead on the Web server routes ...
