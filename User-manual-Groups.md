@@ -3,7 +3,7 @@ The contacts groups page is a view of the defined contacts in the monitoring sys
 
 Each contacts group contains the name (and a link to ...) of the contacts declared as member for the group.
 
-![Hosts groups page](Capture03.JPG "Hosts groups")
+![Contacts groups page](Capture03.JPG "Contacts groups")
 
 
 ## Hosts groups
