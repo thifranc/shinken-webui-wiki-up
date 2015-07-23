@@ -1,6 +1,6 @@
 ## Dashboard
 
-The dashboard page is the application main page.
+The dashboard page is the application main page. This means that this page is âge is automatically presented to a freshly authenticated user.
 
 On top of the Dashboard page, a summary bar with main information about the system status : 
  - current hosts status
@@ -9,6 +9,7 @@ On top of the Dashboard page, a summary bar with main information about the syst
  - current impacts
 
 The current hosts status shows how many hosts are currently monitored (and related to the current user) and which percentage of these hosts are currently UP. If percentage is lower than 90%, it displays on red background, if lower than 95% on orange background, else on green background.
+> Percentage thresholds are defined in the Web UI configuration file.
 
 The current services status shows how many services are currently monitored (and related to the current user) and which percentage of these services are currently OK. If percentage is lower than 90%, it displays on red background, if lower than 95% on orange background, else on green background.
 
