@@ -11,9 +11,6 @@
  - [Main application][conf-main]
  - [Worldmap plugin][conf-worldmap]
 
-* [Development][development]
- - [Technical documentation][dev-design]
-
 * [User manual][usermanual]
  - [Dashboard][user-dashboard]
  - [Problems][user-problems]
@@ -22,6 +19,9 @@
  - [Element view][user-element]
  - [System view][user-system]
  - [Configuration view][user-configuration]
+
+* [Development][development]
+ - [Technical documentation][dev-design]
 
 
 [home]: https://github.com/shinken-monitoring/mod-webui/wiki/Home
