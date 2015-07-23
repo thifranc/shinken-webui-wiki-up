@@ -56,6 +56,7 @@ The sidebar menu is organised as is:
 - Dashboard, main application page, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Dashboard)
 - Problems, the current problems view, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Problems)
 - Groups and tags, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Groups):
+  - Contacts groups
   - Hosts groups
   - Services groups
   - Hosts tags
@@ -69,6 +70,7 @@ The sidebar menu is organised as is:
   - Configuration
   - Status
   - Logs
+  - Availability
 - Configuration, [described here](https://github.com/shinken-monitoring/mod-webui/wiki/User-manual-Configuration):
   - Contacts
   - Commands
