@@ -12,6 +12,7 @@ The current hosts status shows how many hosts are currently monitored (and relat
 > Percentage thresholds are defined in the Web UI configuration file.
 
 The current services status shows how many services are currently monitored (and related to the current user) and which percentage of these services are currently OK. If percentage is lower than 90%, it displays on red background, if lower than 95% on orange background, else on green background.
+> Percentage thresholds are defined in the Web UI configuration file.
 
 The current IT problems shows how many problems are currently detected (and related to the current user). If the worst problem is critical it displays on red background, if warning than on orange background, else on green background if no problems are detected.
 
@@ -19,7 +20,7 @@ The current impacts shows how many impacts are currently present (and related to
 
 
 
-The page layout is made of a three-columns grid taht receives some widgets. Widgets may be chosen by the logged in user. The chosen widgets and their configuration is part of the user's preferences and will be stored if a storage module is configured.
+The page layout is made of a three-columns grid that displays some widgets. Widgets may be chosen by the logged in user. The chosen widgets and their configuration is part of the user's preferences and will be stored if a storage module is configured.
 
  <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/02.jpg" width="768">
 
@@ -35,12 +36,13 @@ The page layout is made of a three-columns grid taht receives some widgets. Widg
  The top area contains a line for all possible hosts states and a line for all possible services states. Each possible state displays the number and percentage of concerned hsots/services.
 
  The middle area also contains a line for all possible hosts states and a line for all possible services states. Each possible state displays the number/total and percentage of concerned hosts/services. If percentage is lower than 90%, it displays on red background, if lower than 95% on orange background, else on green background.
+> Percentage thresholds are defined in the Web UI configuration file.
 
  The bottom area displays the current IT problems and the current impacts. For IT problems, number of hosts problems and services problems are displayed on a background color indicating the worst state.
 
 <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/32.jpg" width="768">
 
-An icon on top left of this view allows to go back to Dashboard page. Another icon allows to switch to toggle browser to fullscreen mode (if your browser support this feature).
+An icon on top left of this view allows to go back to Dashboard page. Another icon allows to switch to toggle browser to fullscreen mode (if your browser support this feature ...).
 
 
 
