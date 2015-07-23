@@ -1,1 +1,1 @@
-![Shinken logo](https://github.com/mohierf/mod-webui/blob/bs3/doc/user/logo_very_small.png) - **Shinken 2.4 Web User Interface**, ©2011-2015
+![Shinken logo](https://github.com/shinken-monitoring/mod-webui/blob/bs3/doc/user/logo_very_small.png) - **Shinken 2.4 Web User Interface**, ©2011-2015
