@@ -6,20 +6,20 @@ This file need to be completed and updated !!!
 
 ## WebUI integration with Shinken
 
-The WebUI is an external broker module. As of it, it's an external process launched by the main broker. It consumes broks (broker messages) to update its informations. It can get *all* broks if you place this broker in your top level realm.
+The WebUI is an external broker module. As of it, it's an external process launched by the main broker. It consumes broks (broker messages) to update its *DataManager* thanks to a *Regenerator*. It can get *all* Shinken broks if you place this broker in your top level realm.
 
-The WebUI is also *almost* a daemon because it loads its own modules as a broker. The modules loaded by the WebUI allow to enrich its feature with user authentication, preferences storage, graphing metrics, ...
+The WebUI is also *almost* a daemon because it loads its own modules as a broker. The modules loaded by the WebUI allow to enrich its features with user authentication, preferences storage, graphing metrics, ...
 
-The WebUI does not use a database to get data. Instead, it uses a "regenerator" object that will consume each brok, and will "recreate" all Hosts/Services/Contacts objects as if the code was in the scheduler daemon. So basically, WebUI and pages always reflect the CURRENT state of hosts/services objects.
+The WebUI does not use a database to get data. Instead, it uses a "Regenerator" object that will consume each brok, and will "recreate" all Hosts/Services/Contacts objects as if the code was in the scheduler daemon. So basically, WebUI and pages always reflect the **current state** of monitoring objects.
 
-The WebUI HTTP layer is handled with bottle.py (http://bottlepy.org/docs/dev/index.html). It's a fast, simple and lightweight WSGI micro web-framework for Python. It will use the best backend it finds. We recommend using python-cherrypy which is multi-threaded (default SWSGI is single-threaded), so please use it if you want to avoid locking problems in a production environment ...
+The WebUI HTTP layer is handled with bottle.py (http://bottlepy.org/docs/dev/index.html). Bottle is a fast, simple and lightweight WSGI micro web-framework for Python. It will use the best backend it finds. We recommend using python-cherrypy which is multi-threaded (default SWSGI is single-threaded), so please use it if you want to avoid locking problems in a production environment ...
 
 
 ### How does the WebUI function globally ? 
 
 There are 2 threads running concurrently:
   * the main thread is the bottle.py (Http) listener. 
-  * the 2nd thread is the thread that gets broks and gives them to the regenerator object to update data model.
+  * the 2nd thread is the thread that gets broks and gives them to the regenerator object to update the data model.
 
 There is a lock system between the threads. You can have several Http requests in progress without problem, but during this time the renererator will wait. During execution of the regenerator, no requests are processed. This is not considered as a problem, as the regenerator is very fast, and there is only a 1s lock for a 7k service conf loading, so it's not a huge problem.
 
