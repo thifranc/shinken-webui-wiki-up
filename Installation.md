@@ -9,6 +9,12 @@ WebUI is built upon a main application using several modules:
 - storing modules, used to make parameters persistent
 - graphing modules, used to display graphs built from metrics
 
+**TO BE COMPLETED**:
+```
+- propose a set of "standard" modules for which WebUI consistency is maintained
+- explain the WebUI and modules interaction ... especially configuration consistency!
+```
+
 ## Installing the main application
 
 The main application is easily installed with the Shinken CLI.
@@ -18,7 +24,13 @@ $ shinken install webui
 
 The configuration file (*webui.cfg*) is located in the *etc/shinken/modules* directory and is self explanatory.
 
-More details for installing and configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-and-configuring-Shinken-WebUI).
+**TO BE COMPLETED**:
+```
+- installing from Github repo
+- updating
+- python requirements
+```
+
 
 ## Installing authentication modules
 
