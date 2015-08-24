@@ -22,12 +22,14 @@ The main application is easily installed with the Shinken CLI.
 $ shinken install webui
 ```
 
+The detailed installation procedure is available [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI).
+
 The configuration file (*webui.cfg*) is located in the *etc/shinken/modules* directory and is self explanatory.
 
 **TO BE COMPLETED**:
 ```
 - installing from Github repo
-- updating
+- how-to updating
 - python requirements
 ```
 
