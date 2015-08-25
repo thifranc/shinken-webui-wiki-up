@@ -1,4 +1,6 @@
-It exists different authentication modules that are to be used with the Shinken WebUI. From the most simple up to the module that enables LDAP or Active directory authentication.
+The WebUI can use external modules to check user/password before allowing access to the interface.
+
+> You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
 
 ## Default authentication: Shinken contact - (was auth-cfg-password)
 
