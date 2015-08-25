@@ -20,6 +20,8 @@ modules     webui
 $ sudo service shinken restart
 ```
 
+Then, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences][ins-storing] or [graphs](ins-graphing).
+
 ## Expert install: from the Github repository
 
 Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
