@@ -20,7 +20,7 @@
  - [System view][user-system]
  - [Configuration view][user-configuration]
 
-* [How to contribute][how-to-contribute]
+* [How to contribute][contribute]
  - [Technical documentation][dev-design]
 
 
