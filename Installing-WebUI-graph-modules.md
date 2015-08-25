@@ -8,7 +8,7 @@ Note that the WebUI do not include graph's links directly, but will proxy the im
 
 ### PNP graphs
 
-You can ask for a PNP integration with the ui-pnp module. 
+You can ask for a PNP integration with the `ui-pnp` module. 
 
 How to install:
 ```
@@ -41,7 +41,7 @@ Shinken will automatically replace YOURSERVERNAME with the broker hostname at ru
 
 ### Graphite graphs
 
-You can ask for Graphite graphs with the graphite_ui definition.
+You can ask for Graphite graphs with the `ui-graphite` module.
 
 
 How to install:
