@@ -14,13 +14,11 @@ define module {
    ## Modules for WebUI
    # - auth-htpasswd         = Use an htpasswd file for auth backend.
    # - auth-active-directory = Use AD for auth backend (and retrieve photos).
-   # - auth-cfg-password     = Use the password set in Shinken contact for auth.
    # - auth-ws-glpi          = Use the Glpi Web Services for user authentication
    # - ui-pnp                = Use PNP graphs in the UI.
    # - ui-graphite           = Use graphs from Graphite time series database.
-   # - mongodb               = Save user preferences to a Mongodb database
    # - SQLitedb              = Save user preferences to a SQLite database
-   modules                    auth-cfg-password, auth-ws-glpi, ui-graphite
+   modules                    auth-ws-glpi, ui-graphite
 
 
    # Web server configuration
