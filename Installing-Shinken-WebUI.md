@@ -1,6 +1,6 @@
 ## From the shinken.IO
 
-The easiest solution to set up the Shinken WebUI is to use the CLI *shinken install* which will install from Shinken.IO.
+The easiest solution to set up the Shinken WebUI is to use the CLI *shinken install* which will install from [Shinken.IO](https://shinken.io/).
 
 * Install the WebUI
 ```
@@ -12,19 +12,6 @@ $ shinken install webui
 $ cat /etc/shinken/brokers/broker-master.cfg
 [...]
 modules     webui
-[...]
-```
-
-* Install an authentication module. For instance:
-```
-$ shinken install auth-cfg-password
-```
-
-* Add it into the modules of the WebUI:
-```
-$ cat /etc/shinken/modules/webui.cfg
-[...]
-modules     auth-cfg-password
 [...]
 ```
 
