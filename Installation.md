@@ -46,7 +46,7 @@ The WebUI can use external modules to check user/password before allowing access
 
 By default, the`auth-cfg-password` module is embedded in the WebUI (you don't need to install it). I will look for the `password` parameter into your contact definitions (contacts.cfg, for instance).
 
-Important note: you can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
+> You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
 
 More information about authentication modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules).
 
@@ -56,7 +56,7 @@ The WebUI can use external modules to store common and user's preferences: dashb
 
 By default, a `mongodb` module is embedded in the WebUI (you don't need to install it). To use it, you just need to install mongodb (with your distribution packages) and pymongo (with pip or with your distribution packages). It's very easy and doesn't need any configuration.
 
-Of course, you cannot use many preferences modules. If more than one are installed, the first one will be use.
+> Of course, you cannot use many preferences modules. If more than one are installed, the first one will be use.
 
 More information about storage modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-storage-modules).
 
@@ -65,6 +65,8 @@ More information about storage modules and their installation/configuration [on 
 The WebUI can use external modules to display graphs corresponding to the services directly in the WebUI.
 
 Currently there is two graphs systems supported : PNP4Nagios and Graphite.
+
+> You can use as many graph modules as you want, but in most cases only one should be enough.
 
 Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and count on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
 
