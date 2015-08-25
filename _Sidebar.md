@@ -1,7 +1,7 @@
 # Table of contents
 * [About Shinken WebUI][home]
 
-* [Upgrading](upgrade)
+* [Upgrading from the old WebUI](upgrade)
 
 * [Installing][installing]
  - [Authentication modules][ins-authenticating]
