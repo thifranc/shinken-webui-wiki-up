@@ -1,10 +1,13 @@
 # Table of contents
 * [About Shinken WebUI][home]
 
+* [Upgrading](upgrade)
+
 * [Installing][installing]
  - [Authentication modules][ins-authenticating]
  - [Storage modules][ins-storing]
  - [Graphing modules][ins-graphing]
+ - [Logs and availability modules][ins-logs]
 
 * [Configuring][configuring]
  - [Main application][conf-main]
