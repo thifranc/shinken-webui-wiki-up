@@ -1,6 +1,6 @@
 ## From the shinken.IO
 
-The easiest solution to set up the Shinken WebUI is to use the CLI *shinken install* which will install from [Shinken.IO](https://shinken.io/).
+The easiest solution to set up the Shinken WebUI is to use the CLI *shinken install* which will install from [Shinken.IO](http://shinken.io/).
 
 * Install the WebUI
 ```
@@ -22,7 +22,7 @@ $ sudo service shinken restart
 
 ## From the Github repository
 
-Assuming you already installed from the shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
+Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
 ```
 [Get a release from the project repo]
 $ wget https://github.com/shinken-monitoring/mod-webui/archive/BS3-1.0.tar.gz
