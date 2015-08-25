@@ -1,14 +1,24 @@
-It exists two storage modules that are to be used with the Shinken WebUI: mongodb and Sqlite. We recommand using the mongodb module because it is the one that is best integrated and tested with the WebUI.
+The WebUI can use external modules to store common and user's preferences: dashboard, default parameters, bookmarks, etc.
 
-> The sqlite module is not documented, some information may be found in the Shinken documentation if needed.
+By default, a mongodb module is embedded in the WebUI (you don't need to install it). To use it, you just need to install mongodb (with your distribution packages) and pymongo (with pip or with your distribution packages). It's very easy and doesn't need any configuration.
+
+> Of course, you cannot use many preferences modules. If more than one are installed, the first one will be use.
 
 ## Mongodb
-The mongodb module is the one which is best integrated with the WebUI. Default parameters do not need to be modified.
 
-How to install:
+This module is now embedded in the WebUI. You only need to install mongodb:
+
+On Debian/Ubuntu
 ```
-$ shinken install mongodb
+$ aptitude install mongodb pymongo
 ```
+
+On Redhat/Centos:
+**TODO**
+
+### Configuration
+
+Default parameters do not need to be modified.
 
 How to configure:
 ```
@@ -30,10 +40,6 @@ define module {
     #replica_set                  ;Advanced option if you are running a cluster environnement
 }
 
-$ cat /etc/shinken/modules/webui.cfg
-[...]
-modules     auth-cfg-password, mongodb
-[...]
-```
+## SQLite
 
-
+> The sqlite module is not documented, has not been tested and should not be used except if you know exactly what you are doing. Please notice no support will be provided if you use this module. Some information may be found in the Shinken documentation if needed. 
