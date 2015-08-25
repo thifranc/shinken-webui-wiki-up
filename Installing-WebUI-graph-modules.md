@@ -1,8 +1,14 @@
-It exists two graphing modules that may be used by the Shinken WebUI.
+The WebUI can use external modules to display graphs corresponding to the services directly in the WebUI.
+
+Currently there is two graphs systems supported : PNP4Nagios and Graphite.
+
+> You can use as many graph modules as you want, but in most cases only one should be enough.
+
+Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and count on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
 
 ### PNP graphs
 
-You can ask for a PNP integration with a pnp_webui module. 
+You can ask for a PNP integration with the ui-pnp module. 
 
 How to install:
 ```
@@ -26,7 +32,7 @@ define module {
 
 $ cat /etc/shinken/modules/webui.cfg
 [...]
-modules     auth-cfg-password, mongodb, ui-pnp
+modules     ui-pnp
 [...]
 ```
 
@@ -84,7 +90,7 @@ define module {
 
 $ cat /etc/shinken/modules/webui.cfg
 [...]
-modules     auth-cfg-password, mongodb, ui-graphite
+modules     ui-graphite
 [...]
 ```
 
