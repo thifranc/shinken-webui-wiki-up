@@ -16,28 +16,7 @@ define contact{
 }
 ```
 
-How to install:
-```
-$ shinken install auth-cfg-password
-```
-
-How to configure:
-```
-$ cat /etc/shinken/modules/auth-cfg-password.cfg
-[...]
-
-define module {
-   module_name Cfg_password
-   module_type cfg_password_webui
-   
-   # No configuration ...
-}
-
-$ cat /etc/shinken/modules/webui.cfg
-[...]
-modules     auth-cfg-password
-[...]
-```
+*You don't need to install and configure this module as it is now embedded in the webui and use by default.* If you don't want to use it, just don't put passwords in you contact definitions.
 
 ## Apache htpasswd - (auth-htpasswd)
 
