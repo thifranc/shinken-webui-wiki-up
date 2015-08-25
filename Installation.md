@@ -38,6 +38,8 @@ The configuration file (`webui.cfg`) is located in the `etc/shinken/modules` dir
 **TO BE COMPLETED **
 
 
+# Modules
+
 ## Authentication modules
 
 The WebUI can use external modules to check user/password before allowing access to the interface.
