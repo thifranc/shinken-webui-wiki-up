@@ -50,7 +50,7 @@ modules     auth-htpasswd
 [...]
 ```
 
-## Active Directory / OpenLDAP - (ad_webui)
+## Active Directory / OpenLDAP - (auth-active-directory)
 
 This module allows to lookup passwords into both Active Directory or OpenLDAP entries.
 
@@ -128,3 +128,7 @@ $ cat /etc/shinken/modules/webui.cfg
 modules     auth-ws-glpi
 [...]
 ```
+
+## Others
+
+There may be other authentication modules. Just search for "auth" in https://github.com/shinken-monitoring/ repositories or on https://shinken.io/.
