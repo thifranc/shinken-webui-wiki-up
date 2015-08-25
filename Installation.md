@@ -10,12 +10,6 @@ WebUI is built upon a main application and can use several modules to delegate s
 - graphing modules, used to display graphs built from metrics
 - … (helpdesk, logs…)
 
-**TO BE COMPLETED**:
-```
-- propose a set of "standard" modules for which WebUI consistency is maintained
-- explain the WebUI and modules interaction ... especially configuration consistency!
-```
-
 ## Installing the main application
 
 The main application is easily installed with the Shinken CLI.
