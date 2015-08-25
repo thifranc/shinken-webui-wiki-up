@@ -2,7 +2,7 @@
 
 ## Forewords
 
-Shinken Web User Interface is built with a modern Javascript library (Bootstrap 3) to allow access with most Web browser even on small devices or tablets.
+Shinken Web User Interface is built with a modern CSS and Javascript library (Bootstrap 3) to allow access with most Web browser even on small devices or tablets.
 
 ## Pre-requisites
 
