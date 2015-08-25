@@ -1,6 +1,6 @@
 It exists different authentication modules that are to be used with the Shinken WebUI. From the most simple up to the module that enables LDAP or Active directory authentication.
 
-## Shinken contact - (auth-cfg-password)
+## Default authentication: Shinken contact - (was auth-cfg-password)
 
 This module is the most simple one and the weakest one also because it uses a password stored in the contacts files. The user is authenticated if the password is identical to the one stored in the file.
 
