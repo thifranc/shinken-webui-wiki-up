@@ -1,67 +1,53 @@
-# Installing the Web UI
+## From the shinken.IO
 
-Shinken can provide a self sufficient Web User Interface, which includes its own web server (No need to setup Apache or Microsoft IIS)
+The easiest solution to set up the Shinken WebUI is to use the CLI *shinken install* which will install from [Shinken.IO](http://shinken.io/).
 
-This Shinken WebUI is started at the same time as the Shinken broker. It is configured by setting a few basic parameters in several modules.
-
-WebUI is built upon a main application and can use several modules to delegate some actions:
-- authentication modules, used to authenticate users that log in
-- storing modules, used to make parameters persistent
-- graphing modules, used to display graphs built from metrics
-- … (helpdesk, logs…)
-
-## Installing the main application
-
-The main application is easily installed with the Shinken CLI.
+* Install the WebUI
 ```
 $ shinken install webui
 ```
 
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
+
 ```
 $ pip install pymongo requests arrow
 ```
 
-The detailed installation procedure is available [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI).
+* And declare it into the modules of the broker configuration :
+```
+$ cat /etc/shinken/brokers/broker-master.cfg
+[...]
+modules     webui
+[...]
+```
 
-The configuration file (`webui.cfg`) is located in the `etc/shinken/modules` directory and is self explanatory.
+* Restart Shinken
+```
+$ sudo service shinken restart
+```
 
+The configuration file (webui.cfg) is located in the etc/shinken/modules directory and is self explanatory. You can look at the [configuration documentation](configuring) for more informations.
 
-## Upgrading the application
+Then, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing) or [graphs](ins-graphing).
 
-**TO BE COMPLETED **
+## Expert install: from the Github repository
 
+Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
+```
+[Get a release from the project repo]
+$ wget https://github.com/shinken-monitoring/mod-webui/archive/BS3-1.0.tar.gz
+$ tar -xvf BS3-1.0.tar.gz
 
-# Modules
+[Stop Shinken]
+$ sudo service shinken stop
 
-## Authentication modules
+[Update application]
+$ cp -R mod-webui-BS3-1.0/* /var/lib/shinken/modules/webui/.
 
-The WebUI can use external modules to check user/password before allowing access to the interface.
+[Start Shinken]
+$ sudo service shinken start
+```
 
-By default, the`auth-cfg-password` module is embedded in the WebUI (you don't need to install it). I will look for the `password` parameter into your contact definitions (contacts.cfg, for instance).
+Your configuration file is located in the *etc/modules/webui.cfg* and it will not be affected by the previous copy.
 
-> You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
-
-More information about authentication modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules).
-
-## User's preferences modules
-
-The WebUI can use external modules to store common and user's preferences: dashboard, default parameters, bookmarks, etc.
-
-By default, a `mongodb` module is embedded in the WebUI (you don't need to install it). To use it, you just need to install mongodb (with your distribution packages) and pymongo (with pip or with your distribution packages). It's very easy and doesn't need any configuration.
-
-> Of course, you cannot use many preferences modules. If more than one are installed, the first one will be use.
-
-More information about storage modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-storage-modules).
-
-## Metrology graph modules
-
-The WebUI can use external modules to display graphs corresponding to the services directly in the WebUI.
-
-Currently there is two graphs systems supported : PNP4Nagios and Graphite.
-
-> You can use as many graph modules as you want, but in most cases only one should be enough.
-
-Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and count on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
-
-More information about graphing modules and their installation/configuration [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-graph-modules).
+> Your installation directories (etc, modules) are located in the *.shinken.ini* file of your home directory.
