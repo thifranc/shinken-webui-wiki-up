@@ -7,6 +7,8 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 $ shinken install webui
 ```
 
+The configuration file (webui.cfg) is located in the etc/shinken/modules directory and is self explanatory. You can look at the [configuration documentation](configuring) for more informations.
+
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
 
 ```
