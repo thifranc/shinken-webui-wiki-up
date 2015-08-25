@@ -23,6 +23,11 @@ The main application is easily installed with the Shinken CLI.
 $ shinken install webui
 ```
 
+Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
+```
+$ pip install pymongo requests arrow
+```
+
 The detailed installation procedure is available [on this page](https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI).
 
 The configuration file (*webui.cfg*) is located in the *etc/shinken/modules* directory and is self explanatory.
