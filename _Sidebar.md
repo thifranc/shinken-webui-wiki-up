@@ -2,7 +2,6 @@
 * [About Shinken WebUI][home]
 
 * [Installing][installing]
- - [Main application][ins-main]
  - [Authentication modules][ins-authenticating]
  - [Storage modules][ins-storing]
  - [Graphing modules][ins-graphing]
