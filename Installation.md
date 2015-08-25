@@ -30,7 +30,7 @@ The configuration file (webui.cfg) is located in the etc/shinken/modules directo
 
 Then, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing), [graphs](ins-graphing) and even [logs&availability](ins-logs).
 
-# Expert install: from the Github repository
+## Expert install: from the Github repository
 
 Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
 ```
