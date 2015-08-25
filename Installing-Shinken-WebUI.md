@@ -7,6 +7,10 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 $ shinken install webui
 ```
 
+Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
+
+$ pip install pymongo requests arrow
+
 * And declare it into the modules of the broker configuration :
 ```
 $ cat /etc/shinken/brokers/broker-master.cfg
