@@ -1,10 +1,6 @@
 # Shinken Web User Interface
 
-**Please note that this new version of the Web UI Wiki is still a work in progress :-)**
-
-**Screen captures used to illustrate some pages are not up to date !**
-
-![Shinken logo](https://github.com/shinken-monitoring/mod-webui/blob/bs3/doc/user/logo2.png)
+**Pleaase note that the screen captures used to illustrate some pages are not up to date with the most recent version!**
 
 Shinken can provide a self sufficient Web User Interface, which includes its own web server (No need to setup Apache or Microsoft IIS)
 
