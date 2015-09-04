@@ -1,4 +1,3 @@
-# Installing WebUI logs and availability modules
 
 The WebUI can use external modules to display logs and availability stats corresponding to the services and hosts.
 
