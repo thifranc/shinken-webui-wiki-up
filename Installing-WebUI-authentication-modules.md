@@ -7,6 +7,9 @@ The user authentication is made by the WebUI login process in the following orde
 
 > You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
 
+> Please note that a Shinken contact must always exist with the same name as the username, whatever the authentication method you intend to use!
+
+
 ## Default authentication: Shinken contact - (was auth-cfg-password)
 
 This module is the most simple one and the weakest one also because it uses a password stored in the contacts files. The user is authenticated if the password is identical to the one stored in the file.
