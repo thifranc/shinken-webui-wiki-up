@@ -1,4 +1,9 @@
-The WebUI can use external modules to check user/password before allowing access to the interface.
+The WebUI can use external modules to check user/password before allowing access to the interface. The WebUI also embeds two authentication modules (contact password and htpasswd file) to avoid installing some extra modules.
+
+The user authentication is made by the WebUI login process in the following order: 
+- first, tries to authenticate the user with the extra modules defined in its configuration
+- then, tries the *Contact file* embedded authentication
+- last, tries the *htpasswd file* embedded authentication
 
 > You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
 
@@ -20,36 +25,26 @@ define contact{
 
 **You don't need to install and configure this module as it is now embedded in the webui and used by default.** If you don't want to use it, just don't put passwords in you contact definitions.
 
-## Apache htpasswd - (auth-htpasswd)
+## Default authentication: Apache htpasswd - (was auth-htpasswd)
 
 This module uses an Apache passwd file (htpasswd) as authentification backend. All it needs is the full path of the file.
 
 Check that the owner of the file is the defined Shinken user and that this file is readable. 
 
-> If you don't have such a file you can generate one with the “htpasswd” command (in Debian's “apache2-utils” package), or from websites like htaccessTools. 
+> If you don't have such a file you can generate one with the “htpasswd” command (in Debian's “apache2-utils” package), or from websites like htaccessTools (http://www.htaccesstools.com/htpasswd-generator/). 
 
-How to install:
-```
-$ shinken install auth-htpasswd
-```
+**You don't need to install and configure this module as it is now embedded in the webui and used by default.** If you don't want to use it, just leave the htpasswd file name empty in the WebUI configuration file.
 
 How to configure:
 ```
-$ cat /etc/shinken/modules/auth-cfg-password.cfg
-[...]
-
-define module {
-   module_name      auth-htpasswd
-   module_type      passwd_webui
-
-   # Define the full path of your htpasswd file ...
-   passwd           /etc/shinken/htpasswd.users
-}
-
 $ cat /etc/shinken/modules/webui.cfg
 [...]
-modules     auth-htpasswd
-[...]
+
+   
+   # htpasswd (apache like) file containing username/passwords
+   # Use an Apache htpasswd file or build your own (http://www.htaccesstools.com/htpasswd-generator/)
+   htpasswd_file              /etc/shinken/htpasswd.users
+
 ```
 
 ## Active Directory / OpenLDAP - (auth-active-directory)
