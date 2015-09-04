@@ -6,7 +6,7 @@ Currently there is two graphs systems supported : PNP4Nagios and Graphite.
 
 Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and count on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
 
-### PNP graphs
+## PNP graphs
 
 You can ask for a PNP integration with the `ui-pnp` module. 
 
@@ -39,7 +39,7 @@ modules     ui-pnp
 Shinken will automatically replace YOURSERVERNAME with the broker hostname at runtime to try and make it work for you, but you MUST change it to the appropriate value.
 
 
-### Graphite graphs
+## Graphite graphs
 
 You can ask for Graphite graphs with the `ui-graphite` module.
 
