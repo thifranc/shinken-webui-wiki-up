@@ -7,8 +7,6 @@ Selecting the contacts group name links to the *All resources* page, with a filt
 
 Selecting the name of a contact links to the contact information page.
 
-![Contacts groups page](Capture03.JPG "Contacts groups")
-
 
 ## Hosts groups
 The hosts groups page is a view of the monitored hosts grouped by hosts groups. This page displays the groups of the current level, starting from Level 0 groups.
@@ -23,7 +21,7 @@ Selecting the group name links to the *All resources* page, with a filter on the
 
 Selecting the hosts state icon links to the *All resources* page, with a filter on the selected hosts group and state, displaying all the hosts that are members of the group and in the selected state.
 
-![Hosts groups page](https://github.com/shinken-monitoring/mod-webui/blob/bs3/doc/user/Capture03.JPG "Hosts groups")
+ <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/06.jpg" width="768">
 
 **The same logic is applicable for services groups!**
 
@@ -32,8 +30,8 @@ The hosts tags page is a view of the monitored hosts grouped by hosts tags. This
 
 Each hosts group contains information about the Up, Unreachable, Down and Unknown hosts status.
 
-Hovering a group allows to switch to the details view for the group.
+Selecting the tags group name links to the *All resources* page, with a filter on the selected tag, displaying all the hosts that are tagged with the selected tag.
 
-![Hosts tags page](https://github.com/shinken-monitoring/mod-webui/blob/bs3/doc/user/Capture04.JPG "Hosts tags")
+ <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/07.jpg" width="768">
 
 **The same logic is applicable for services tags!**
