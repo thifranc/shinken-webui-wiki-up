@@ -10,7 +10,7 @@ $ shinken install webui
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
 
 ```
-$ pip install pymongo requests arrow
+$ pip install pymongo requests arrow bottle
 ```
 
 * And declare it into the modules of the broker configuration :
@@ -35,14 +35,14 @@ Then, you may want to look how to enable modules like [authentication](ins-authe
 Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
 ```
 [Get a release from the project repo]
-$ wget https://github.com/shinken-monitoring/mod-webui/archive/BS3-1.0.tar.gz
-$ tar -xvf BS3-1.0.tar.gz
+$ wget https://github.com/shinken-monitoring/mod-webui/archive/branch.tar.gz
+$ tar -xvf branch.tar.gz
 
 [Stop Shinken]
 $ sudo service shinken stop
 
 [Update application]
-$ cp -R mod-webui-BS3-1.0/* /var/lib/shinken/modules/webui/.
+$ cp -R mod-webui-branch/* /var/lib/shinken/modules/webui/.
 
 [Start Shinken]
 $ sudo service shinken start
