@@ -5,7 +5,13 @@ On the top side of the page, it is possible to filter the list and to set bookma
 
  <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/05.jpg" width="768">
 
-## Bookmarks
+### Items
+The items displayed in the problems list may be expanded to display more information and actions buttons. If the user is allowed to send commands on the Web UI, he will be able to act on the current element: acknowledge a problem, schedule a downtime, ...
+
+The items can be selected to create a list of selected items on which the allowed user will be able to act in one operation.
+
+
+### Bookmarks
 Bookmarks are a list of stored filters. When a user wants to store a filter to reuse later, he may bookmarks this filter and store it with a name. The bookmark may then be reused simply bu clicking on its name in the bookmarks list.
 
 The user can make its bookmarks available for all the Shinken Wtb UI users, simply by making it global.
