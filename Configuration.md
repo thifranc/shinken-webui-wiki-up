@@ -1,1 +1,1 @@
-The WebUI application is configured mainly from the `webui.cfg` file located in the `/etc/shinken/modules` directory. [This page](https://github.com/shinken-monitoring/mod-webui/wiki/Configuration-Main) explains all the `webui.cfg` file parameters.
+The WebUI application is configured mainly from the `webui2.cfg` file located in the `/etc/shinken/modules` directory. [This page](https://github.com/shinken-monitoring/mod-webui/wiki/Configuration-Main) explains all the `webui.cfg` file parameters.
