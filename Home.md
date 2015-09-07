@@ -1,6 +1,6 @@
 # Shinken Web User Interface
 
-*Pleaase note that the screen captures used to illustrate some pages are not up to date with the most recent version!*
+*Please note that the screen captures used to illustrate some pages are not up to date with the most recent version!*
 
 Shinken can provide a self sufficient Web User Interface, which includes its own web server (No need to setup any other Web server). The WebUI is built with the most recent Javascript Bootstrap 3 library as to deliver a user interface compatible with a wide range of Web browsers.
 
