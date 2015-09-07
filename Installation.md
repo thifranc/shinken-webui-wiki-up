@@ -33,7 +33,7 @@ $ sudo service shinken restart
 
 The configuration file (`webui2.cfg`) is located in the etc/shinken/modules directory and is self explanatory. You can look at the [configuration documentation](configuring) for more informations.
 
-Despite the WebUI is fully operational out of the box, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing), [graphs](ins-graphing) and even [logs&availability](ins-logs).
+Despite the WebUI is fully operational out of the box, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing), [graphs](ins-graphing) and even [logs & availability](ins-logs).
 
 ## Updating from previous installation
 
