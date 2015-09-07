@@ -7,7 +7,7 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 $ shinken install webui2
 ```
 
-> Note that the shinken.io package is **webui2**! This to avoir conflicting with a previous installation of the WebUI.
+> Note that the shinken.io package is **webui2**! This to avoid conflicting with a previous installation of the WebUI.
 
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
 
