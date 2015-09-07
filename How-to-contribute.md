@@ -2,23 +2,29 @@
 
 ### Reporting a bug
 Please do not hesitate to log an issue: 
-* A helpful title - use descriptive keywords in the title and body so others can find your bug (avoiding duplicates).
-* Specify: 
- - WebUI Version and branch
- - OS version, Web Browser and Version
- - Steps to reproduce the problem, with actual vs. expected results
-* If the problem happens with specific code, link to test files (gist.github.com is a great place to upload code).
-* Screenshots are very helpful if you're seeing an error message or a UI display problem. (Just drag or copy an image into the issue description field to include it).
 
-### Fixing a bug
-1. Fork the repository.
+* First check if the problem is not yet referenced in the project issues (https://github.com/shinken-monitoring/mod-webui/issues)
+* Create an issue with: 
+
+   - an helpful title - use descriptive keywords in the title and body so others can find your bug (avoiding duplicates).
+   - a precise description - steps to reproduce the problem, with actual vs. expected results
+   - specifify : WebUI Version, OS version, Web browser and version
+
+* If the problem happens with specific code, link to test files (gist.github.com is a great place to upload code).
+
+> Screenshots are very helpful if you're seeing an error message or a UI display problem. (Just drag an image into the issue description field to include it).
+
+
+### Contributing
+
+1. Fork this repo.
 2. Create a branch (`git checkout -b my_branch`)
 3. Commit your changes (`git commit -am "Major fixup."`)
 4. Push to the develop branch (`git push develop my_branch`)
 5. Open a [Pull Request](https://github.com/shinken-monitoring/mod-webui/pulls)
 6. Enjoy a refreshing Diet Coke and wait :+1:
 
-## Application design and architecture
+### Application design and architecture
 
  Some information about application design [in this document](https://github.com/shinken-monitoring/mod-webui/wiki/Design).
 
