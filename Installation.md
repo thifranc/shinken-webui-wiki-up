@@ -15,7 +15,7 @@ Then you also need to install some python dependencies using pip (depending on y
 $ sudo pip install pymongo>=3.0.3 requests arrow bottle==0.12.8
 ```
 
-> The packages required are listed in the requirements.txt file.
+> The packages required are listed in the `requirements.txt` file.
 
 * And declare it into the modules of the broker configuration :
 ```
