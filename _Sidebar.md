@@ -12,6 +12,7 @@
 * [Configuring][configuring]
  - [Main application][conf-main]
  - [Web UI users][conf-users]
+ - [host view][conf-hostview]
  - [Worldmap plugin][conf-worldmap]
 
 * [User manual][usermanual]
@@ -37,6 +38,7 @@
 [configuring]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration
 [conf-main]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---Main-parameters
 [conf-users]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---WebUI-Users 
+[conf-hostview]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---custom-host-view
 [conf-worldmap]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---Worldmap
 [development]: https://github.com/shinken-monitoring/mod-webui/wiki/Development
 [dev-design]: https://github.com/shinken-monitoring/mod-webui/wiki/Design
