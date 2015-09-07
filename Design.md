@@ -43,12 +43,7 @@ Once it loaded its plugins the Web UI starts the Web server.
 
 ### What is a WebUI User? 
 
-A WebUI user is a contact and you must have a contact named as the user that authenticates. The WebUI uses authentication modules for enabling user access (see installation doc).
-
-[conf-users]: 
-
-
-https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---WebUI-Users
+A WebUI user is a contact and you must have a contact named as the user that authenticates. The WebUI uses authentication modules for enabling user access (see [Shinken Web UI users](https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---WebUI-Users)).
 
 
 ### To create a new page? 
