@@ -35,6 +35,11 @@ The configuration file (webui2.cfg) is located in the etc/shinken/modules direct
 
 Then, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing), [graphs](ins-graphing) and even [logs&availability](ins-logs).
 
+## Updating from previous installation
+
+If you are updating from previous installation, you should consider getting the new webui2.cfg file and change its content to adapt to your configuration. Default `webui2.cfg` is available here: https://github.com/shinken-monitoring/mod-webui/blob/master/etc/modules/webui2.cfg
+
+
 ## Expert install: from the Github repository
 
 Assuming you already installed from Shinken.IO, you simply need to replace the content of your *modules/webui* directory with the content of the *module* directory from the github repository.
@@ -54,8 +59,6 @@ $ sudo cp -R mod-webui-branch/* /var/lib/shinken/modules/webui2/.
 $ sudo service shinken start
 ```
 
-Your configuration file is located in the *etc/modules/webui.cfg* and it will not be affected by the previous copy.
-
-> If you are updating from previous installation, you should consider getting the new webui2.cfg file and adpt its content to your configuration. webui2.cfg is available here: https://github.com/shinken-monitoring/mod-webui/blob/master/etc/modules/webui2.cfg
+Your configuration file is located in the *etc/modules/webui2.cfg* and it will not be affected by the previous copy.
 
 > Your installation directories (etc, modules) are located in the *.shinken.ini* file of your home directory.
