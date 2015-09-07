@@ -4,8 +4,10 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 
 * Install the WebUI
 ```
-$ shinken install webui
+$ shinken install webui2
 ```
+
+> Note that the shinken.io package is **webui2**! This to avoir conflicting with a previous installation of the WebUI.
 
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
 
@@ -28,7 +30,7 @@ modules     webui
 $ sudo service shinken restart
 ```
 
-The configuration file (webui.cfg) is located in the etc/shinken/modules directory and is self explanatory. You can look at the [configuration documentation](configuring) for more informations.
+The configuration file (webui2.cfg) is located in the etc/shinken/modules directory and is self explanatory. You can look at the [configuration documentation](configuring) for more informations.
 
 Then, you may want to look how to enable modules like [authentication](ins-authenticating), [preferences](ins-storing), [graphs](ins-graphing) and even [logs&availability](ins-logs).
 
@@ -51,5 +53,7 @@ $ sudo service shinken start
 ```
 
 Your configuration file is located in the *etc/modules/webui.cfg* and it will not be affected by the previous copy.
+
+> If you are updating from previous installation, you should consider getting the new webui2.cfg file and adpt its content to your configuration. webui2.cfg is available here: https://github.com/shinken-monitoring/mod-webui/blob/master/etc/modules/webui2.cfg
 
 > Your installation directories (etc, modules) are located in the *.shinken.ini* file of your home directory.
