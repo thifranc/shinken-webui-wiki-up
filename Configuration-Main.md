@@ -1,6 +1,6 @@
 ## Configuring the main application
 
-The WebUI configuration file (*webui.cfg*) is located in the */etc/shinken/modules* directory. This file is largely commented and is quite self explanatory.
+The WebUI configuration file (*webui2.cfg*) is located in the */etc/shinken/modules* directory. This file is largely commented and is quite self explanatory.
 
 ```
 ## Module:      WebUI
@@ -12,13 +12,37 @@ define module {
 
 
    ## Modules for WebUI
-   # - auth-htpasswd         = Use an htpasswd file for auth backend.
-   # - auth-active-directory = Use AD for auth backend (and retrieve photos).
-   # - auth-ws-glpi          = Use the Glpi Web Services for user authentication
-   # - ui-pnp                = Use PNP graphs in the UI.
-   # - ui-graphite           = Use graphs from Graphite time series database.
-   # - SQLitedb              = Save user preferences to a SQLite database
-   modules                    auth-ws-glpi, ui-graphite
+   ## User authentication:
+   # - auth-cfg-password (internal) : Use the password set in Shinken contact for auth.
+   # - auth-htpasswd (internal)     : Use an htpasswd file for auth backend.
+   # You may remove the modules 'auth-cfg-password' and 'auth-htpasswd' from your
+   # configuration because the WebUI embeds those authentication methods.
+   # - auth-ws-glpi                 : Use the Glpi Web Services for user authentication
+   # - auth-active-directory        : Use AD for auth backend (and retrieve photos).
+   
+   # htpasswd (apache like) file containing username/passwords
+   # Use an Apache htpasswd file or build your own (http://www.htaccesstools.com/htpasswd-generator/)
+   htpasswd_file              /etc/shinken/htpasswd.users
+
+   ## Graphs:
+   # - ui-pnp                : Use PNP graphs in the UI.
+   # - ui-graphite           : Use graphs from Graphite time series database.
+   
+   ## Storage:
+   # - mongodb               : Save user preferences to a Mongodb database
+   #                         : Get hosts/services availability from a Mongodb database
+   #                         : Get Shinken logs and hosts history from a Mongodb database
+   # - SQLitedb              : Save user preferences to a SQLite database
+   
+   ## Hosts/services availability:
+   # - mongo-logs            : Store hosts/services availability in a Mongodb database
+   #                         : Display hosts/services availability
+   #                         : Display Shinken logs
+   
+   ## Helpdesk:
+   # - glpi-helpdesk         : Get hosts information from an helpdesk application
+   #                         : Notify helpdesk for hosts problems
+   modules                    
 
 
    # Web server configuration
@@ -29,15 +53,15 @@ define module {
    # Authentication secret for session cookie
    auth_secret                CHANGEME
                               ; CHANGE THIS or someone could forge cookies
-   
-   
+
+
    # WebUI information
    # Overload default information included in the WebUI
    #about_version              2.0 alpha
    #about_copyright            (c) 2013-2015 - License GNU AGPL as published by the FSF, minimum version 3 of the License.
    #about_release              Bootstrap 3 User Interface
 
-   
+
    # Configuration directory
    config_dir                 /var/lib/shinken/config/
 
@@ -48,8 +72,8 @@ define module {
    photos_dir                 /var/lib/shinken/share/photos/
 
    # For external plugins to load on webui
-   #additional_plugins_dir   
-   
+   #additional_plugins_dir
+
 
 
    # Login form
@@ -63,14 +87,11 @@ define module {
    # Default logo is default_company.png (Shinken logo) in webui/htdocs/images
    company_logo               my_company
 
-   
+
    allow_html_output          1
                               ; Allow or not HTML chars in plugins output.
                               ; WARNING: Allowing can be a security issue.
-                        
-   max_output_length          1024
-                              ; Maximum output length for plugin output in webui
-                        
+
    tag_as_image               0
                               ; Use image if available for elements' tags
                               ; Monitoring packs may include an image for the host/service tag
@@ -87,9 +108,7 @@ define module {
    # Refresh period
    refresh_period             60
                               ; Number of seconds between each page refresh
-
-   # WebUI timezone (default is Europe/Paris)
-   #timezone                  Europe/Paris
+                              ; 0 to disable refresh
 
    # Visual alerting thresholds
    # Used in the dashboard view to select background color for percentages
@@ -111,7 +130,7 @@ define module {
 
    # Allow anonymous access for some pages
    # 0 always disallow
-   # 1 allows anonymous access if an anonymous 
+   # 1 allows anonymous access if an anonymous
    # contact is declared in the Shinken configuration
    # Default is 0
    allow_anonymous            1
@@ -126,7 +145,7 @@ define module {
    # Handle with very much care!
    #http_backend              auto
                               ; Choice is: auto, wsgiref or cherrypy if available
-                              
+
    # Specific options store in the serverOptions when invoking Bottle run method ...
    # ------------
    # Handle with very much care!
@@ -134,18 +153,18 @@ define module {
                               ; bindAddress for backend server
    #umask                     auto
                               ; umask for backend server
-                              
+
    #remote_user_enable        1
                               ; If WebUI is behind a web server which
                               ; has already authentified user, enable.
-                              
+
    #remote_user_enable        2
                               ; Look for remote user in the WSGI environment
                               ; instead of the HTTP header. This allows
                               ; for fastcgi (flup) and scgi (flupscgi)
                               ; integration, eg. with the apache modules.
-                              
-   #remote_user_variable      X_Remote_User  
+
+   #remote_user_variable      X_Remote_User
                               ; Set to the HTTP header containing
                               ; the authentificated user s name, which
                               ; must be a Shinken contact.
