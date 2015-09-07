@@ -56,17 +56,17 @@ If gravatar is not configured in the *webui.cfg* file, the Web UI tries to find 
 
 If none found, a default image is used:
 
-![Default admin user picture](../../share/photos/admin.png "Default admin user picture")
+![Default admin user picture](https://github.com/shinken-monitoring/mod-webui/blob/master/share/photos/admin.png "Default admin user picture")
 
-![Default guest user picture](../../share/photos/guest.png "Default guest user picture")
+![Default guest user picture](https://github.com/shinken-monitoring/mod-webui/blob/master/share/photos/guest.png "Default guest user picture")
 
-![Default standard user picture](../../share/photos/default.png "Default standard user picture")
+![Default standard user picture](https://github.com/shinken-monitoring/mod-webui/blob/master/share/photos/default.png "Default standard user picture")
 
 
 ## Company logo
 
 A company logo is used in the Web UI. The default company logo is a Shinken logo.
 
-![Default company logo](../../module/htdocs/images/default_company.png "Default company logo")
+![Default company logo](https://github.com/shinken-monitoring/mod-webui/blob/master/module/htdocs/images/default_company.png "Default company logo")
 
 To use another logo, the file name must be set in the *webui2.cfg* file (*company_logo*) and the file must be copied in the *photos_dir (default is */var/lib/shinken/share/photos/*).
