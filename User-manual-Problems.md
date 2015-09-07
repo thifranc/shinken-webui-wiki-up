@@ -1,9 +1,15 @@
 ## Problems
-The problems page displays a filtered list of the system resources, wether they are problmes or not. the page displays a list of resources grouped by level of criticity (business level).
+The problems page displays a filtered list of the system resources, wether they are problems or not. The problems page displays a list of resources grouped by level of criticity (business level).
 
 On the top side of the page, it is possible to filter the list and to set bookmarks that may be global or user specifically stored.
 
  <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/05.jpg" width="768">
+
+## Bookmarks
+Bookmarks are a list of stored filters. When a user wants to store a filter to reuse later, he may bookmarks this filter and store it with a name. The bookmark may then be reused simply bu clicking on its name in the bookmarks list.
+
+The user can make its bookmarks available for all the Shinken Wtb UI users, simply by making it global.
+
 
 ### Filtering
 
