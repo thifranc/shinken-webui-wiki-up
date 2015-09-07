@@ -47,7 +47,8 @@ $ tar -xvf branch.tar.gz
 $ sudo service shinken stop
 
 [Update application]
-$ cp -R mod-webui-branch/* /var/lib/shinken/modules/webui/.
+$ sudo rm -R /var/lib/shinken/modules/webui2/.
+$ sudo cp -R mod-webui-branch/* /var/lib/shinken/modules/webui2/.
 
 [Start Shinken]
 $ sudo service shinken start
