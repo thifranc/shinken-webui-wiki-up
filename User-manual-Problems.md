@@ -3,6 +3,6 @@ The problems page displays the current detected problems on the system. Problems
 
 On the left side of the page, it is possible to filter the problems list and to set bookmarks that may be global or user specifically stored.
 
-![Problems page](./Capture02.JPG "Problems")
+ <img src="https://raw.githubusercontent.com/wiki/shinken-monitoring/mod-webui/05.jpg" width="768">
 
 
