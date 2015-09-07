@@ -1,5 +1,8 @@
 ## Configuring the main application
 
+The WebUI is fully operational out-of-the-box. There is no need to set up a configuration but many parameters are available to tune up the Web UI to suit your needs.
+
+
 The WebUI configuration file (*webui2.cfg*) is located in the */etc/shinken/modules* directory. This file is largely commented and is quite self explanatory.
 
 ```
@@ -182,8 +185,11 @@ define module {
 - umask                     auto
 - remote_user_enable        1
 
+
 ## Modules 
- *modules* parameter allows to declare the available modules to the application. For more information, see [configuring the application.](https://github.com/shinken-monitoring/mod-webui/wiki/Configuration)
+ *modules* parameter allows to add extra modules to the application. The Web UI is able to use extra modules for [authentication](ins-authenticating), [user's preferences](ins-storing), [graphs](ins-graphing) and [logs & availability](ins-logs).
+
+> To find extra modules, you can search on [Shinken.io](http://shinken.io/) or use the Shinken command line interface `shinken search webui`.
 
 
 ## Directories
@@ -205,9 +211,11 @@ define module {
 
 > Currently, this feature is not used ... as we may know :-)
 
+
 ## Application time zone
 
  The application is handling a time zone for some features (acknowledgements, downtimes scheduling, ...). You are invited to declare your current time zone in the *timezone* parameter. Default value is *Europe/Paris*.
+
 
 ## Application information
 
@@ -222,9 +230,9 @@ The application about box is displayed when the user clicks on the company logo 
 
  The *manage_acl* property allows to inhibit the user rights management. It is not recommended to change this value because all users enabled to log in will be allowed to execute all commands on all the monitored resources.
 
-The *allow_anonymous* property allows to grant access to anonymous users on some application URI. Currently, the only 'opened' URI is the "one eye" dashboard view.
+ The *allow_anonymous* property allows to grant access to anonymous users on some application URI. Currently, the only 'opened' URI is the "one eye" dashboard view.
 
-This feature implies that:
+ This feature implies that:
 - the *allow_anonymous* property is set to 1
 - an anonymous contact is declared in the Shinken configuration as below
 
@@ -247,7 +255,7 @@ define contact{
 
 ## Application parameters
 
- The *allow_html_output* and *max_output_length* are used for displaying the checks output content. They define if HTML is allowed and what is the maximum size that will be displayed.
+ The *allow_html_output* is used for displaying the checks output content. It defines if HTML is allowed.
 
  The *tag_as_image* parameter determines if an image may be used if available for hosts and services tags.
 
