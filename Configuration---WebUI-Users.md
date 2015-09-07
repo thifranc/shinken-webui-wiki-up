@@ -2,17 +2,20 @@
 
 
 ## Login / authentication
-------------------------------------
 
 All Shinken declared contacts are allowed to login the Web UI whereas an authentication module allows their login parameters. 
 
 Main authentication modules are : 
- - auth-cfg-password, that uses the password set in Shinken contact for authentication.
- - auth-htpasswd, that uses an htpasswd file for authentication.
- - auth-active-directory, that uses Active Directory for authentication (and retrieve photos).
- - auth-ws-glpi, that uses Glpi Web Services for user authentication
+ - auth-cfg-password (*embedded*), that uses the password set in Shinken contact for authentication.
+ - auth-htpasswd (*embedded*), that uses an htpasswd file for authentication.
+ - auth-active-directory (*external*), that uses Active Directory for authentication (and retrieve photos).
+ - auth-ws-glpi (*external*), that uses Glpi Web Services for user authentication
 
-Some properties are used by the WebUI in the Shinken contact definition.
+An external module needs to be installed using `shinken install` CLI and then added in the modules property of the `webui2.cfg` configuration file. See [installaing an authentication modules][ins-authenticating] for more information.
+
+## Specific contact properties
+
+Some properties in the Shinken contact definition are specific to the WebUI.
 
 ```
 define contact{
@@ -34,18 +37,16 @@ define contact{
 
 
 ## User role / profile
-------------------------------------
 
 An administrator user is allowed to see all the elements.
 A non administrator user (user) is only allowed to see the elements he is attached to.
 
-An expert user ... to be defined ! Shinken contact owns this property ...
+> An expert user ... to be defined ! Shinken contact owns this property ...
 
 
 ## User picture
-------------------------------------
 
-The user picture used in the Web UI are locally stored in a directory defined in the *webui.cfg* file (*photos_dir*, that defauls to */var/lib/shinken/share/photos/*).
+The user picture used in the Web UI are locally stored in a directory defined in the *webui2.cfg* file (*photos_dir*, that defauls to */var/lib/shinken/share/photos/*).
 
 The user picture used is a PNG file named with the login username (eg. *admin.png*).
 
@@ -63,10 +64,9 @@ If none found, a default image is used:
 
 
 ## Company logo
-------------------------------------
 
 A company logo is used in the Web UI. The default company logo is a Shinken logo.
 
 ![Default company logo](../../module/htdocs/images/default_company.png "Default company logo")
 
-To use another logo, the file name must be set in the *webui.cfg* file (*company_logo*) and the file must be copied in the *photos_dir (default is */var/lib/shinken/share/photos/*).
+To use another logo, the file name must be set in the *webui2.cfg* file (*company_logo*) and the file must be copied in the *photos_dir (default is */var/lib/shinken/share/photos/*).
