@@ -1,1 +1,1 @@
-![Shinken logo](https://github.com/shinken-monitoring/mod-webui/blob/master/doc/user/logo_xxs.png) - **Shinken 2.4 Web User Interface**, ©2011-2015
+![Shinken logo](https://github.com/shinken-monitoring/mod-webui/blob/master/doc/logo_xxs.png) - **Shinken 2.4 Web User Interface**, ©2011-2015
