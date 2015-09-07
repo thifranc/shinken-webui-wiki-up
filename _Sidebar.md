@@ -12,7 +12,7 @@
 * [Configuring][configuring]
  - [Main application][conf-main]
  - [Web UI users][conf-users]
- - [host view][conf-hostview]
+ - [Custom host view][conf-hostview]
  - [Worldmap plugin][conf-worldmap]
 
 * [User manual][usermanual]
