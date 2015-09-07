@@ -4,7 +4,7 @@ Currently there is two graphs systems supported : PNP4Nagios and Graphite.
 
 > You can use as many graph modules as you want, but in most cases only one should be enough.
 
-Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and count on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
+Note that the WebUI do not include graph's links directly, but will proxy the images. So you can configure PNP4Nagios and Graphite to listen only on localhost (or a limited set of IPs), and rely on the WebUI to secure the access to these graphs (showing them only to authenticated and concerned users).
 
 ## PNP graphs
 
