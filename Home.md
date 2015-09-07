@@ -2,7 +2,7 @@
 
 *Please note that the screen captures used to illustrate some pages are not up to date with the most recent version!*
 
-Shinken can provide a self sufficient Web User Interface, which includes its own web server (No need to setup any other Web server). The WebUI is built with the most recent Javascript Bootstrap 3 library as to deliver a user interface compatible with a wide range of Web browsers.
+Shinken provides a self sufficient Web User Interface, which includes its own web server (No need to setup any other Web server). The WebUI is built with the most recent Javascript Bootstrap 3 library as to deliver a user interface compatible with a wide range of Web browsers.
 
 It has been tested successfully with the last Shinken framework versions. As of today, it has been tested with Shinken 2.4.0 and 2.4.1 versions.
 
@@ -17,5 +17,5 @@ WebUI is built upon a main application and it uses several modules to delegate s
 - logs module, used to make available hosts/services activity
 - availability module, used to compute hosts availability
 
-**The WebUI embeds its own modules for authentication, storage, logs and availability, whereas simplifying installation and configuration.**
+**The new WebUI embeds its own modules for authentication, storage, logs and availability, whereas simplifying installation and configuration.**
 
