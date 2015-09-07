@@ -4,6 +4,7 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 
 * Install the WebUI
 ```
+# Log in with your shinken user account ...
 $ shinken install webui2
 ```
 
