@@ -29,7 +29,7 @@
 
 
 [home]: https://github.com/shinken-monitoring/mod-webui/wiki/Home
-[upgrade]: https://github.com/shinken-monitoring/mod-webui/wiki/Upgrading-from-WebUI-v1
+[upgrade]: https://github.com/shinken-monitoring/mod-webui/wiki/Upgrade-from-WebUI-v1
 [installing]: https://github.com/shinken-monitoring/mod-webui/wiki/Installation
 [ins-main]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI
 [ins-authenticating]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules
