@@ -18,6 +18,11 @@ $ sudo pip install pymongo>=3.0.3 requests arrow bottle==0.12.8
 
 > The packages required are listed in the `requirements.txt` file.
 
+By the time, `mongodb` is also mandatory. If you did not yet installed `mongodb`, please install it: 
+```
+$ sudo apt-get install mongodb
+```
+
 * And declare it into the modules of the broker configuration :
 ```
 $ cat /etc/shinken/brokers/broker-master.cfg
