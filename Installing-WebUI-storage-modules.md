@@ -10,11 +10,13 @@ This module is now embedded in the WebUI. You only need to install mongodb:
 
 On Debian/Ubuntu
 ```
-$ aptitude install mongodb pymongo
+$ sudo apt-get install mongodb
 ```
 
 On Redhat/Centos:
-**TODO**
+```
+$ sudo yum install mongodb
+```
 
 ### Configuration
 
@@ -27,4 +29,4 @@ database        shinken
 
 ## SQLite
 
-> The sqlite module is not documented, has not been tested and should not be used except if you know exactly what you are doing. Please notice no support will be provided if you use this module. Some information may be found in the Shinken documentation if needed. 
+> The sqlite module is not documented, has not been tested and should not be used except if you know exactly what you are doing. Please notice that no support will be provided if you use this module. Some information may be found in the Shinken documentation if needed. 
