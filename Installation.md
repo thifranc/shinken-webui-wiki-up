@@ -10,6 +10,8 @@ $ shinken install webui2
 
 > Note that the shinken.io package is **webui2**! This to avoid conflicting with a previous installation of the WebUI.
 
+* Install python dependencies
+
 Then you also need to install some python dependencies using pip (depending on your distribution, you could also install theses packages from your distribution repositories):
 
 ```
@@ -17,6 +19,8 @@ $ sudo pip install pymongo>=3.0.3 requests arrow bottle==0.12.8
 ```
 
 > The packages required are listed in the `requirements.txt` file.
+
+* Install mongodb
 
 By the time, `mongodb` is also mandatory. If you did not yet installed `mongodb`, please install it: 
 ```
