@@ -1,7 +1,7 @@
 # Table of contents
 * [About Shinken WebUI][home]
 
-* [Upgrading from the old WebUI](upgrade)
+* [Upgrading from the old WebUI][upgrade]
 
 * [Installing][installing]
  - [Authentication modules][ins-authenticating]
@@ -29,6 +29,7 @@
 
 
 [home]: https://github.com/shinken-monitoring/mod-webui/wiki/Home
+[upgrade]: https://github.com/shinken-monitoring/mod-webui/wiki/Upgrading-from-WebUI-v1
 [installing]: https://github.com/shinken-monitoring/mod-webui/wiki/Installation
 [ins-main]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI
 [ins-authenticating]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules
