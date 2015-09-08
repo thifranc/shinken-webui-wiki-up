@@ -27,7 +27,7 @@ $ sudo apt-get install mongodb
 ```
 $ cat /etc/shinken/brokers/broker-master.cfg
 [...]
-modules     webui
+modules     webui2
 [...]
 ```
 
