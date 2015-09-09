@@ -6,8 +6,6 @@ Upgrading from WebUI version 1 is made really easy.
   - install python dependencies
   - install mongodb (not mandatory but recommended) 
 
-> **With the current version 2.0, do not rename webui with webui2 in your broker configuration file! Some side effects may exist with some Shinken daemons :/P It also may be mandatory to remove the old `/var/lib/shinken/modules/webui` directory to avoid confusing the main broker ...**
-
 * Edit your broker configuration file and replace `webui` with `webui2` in the modules list:
 ```
 $ vi /etc/shinken/brokers/broker-master.cfg
@@ -29,4 +27,8 @@ $ sudo service shinken restart
 ```
 
 **Notes:**
-* You do not need anymore to include `auth-cfg-password`, `auth-htpasswd` or `mongodb` in the Web UI modules list.
+> You do not need anymore to include `auth-cfg-password`, `auth-htpasswd` or `mongodb` in the Web UI modules list.
+
+**Important note for 2.0 version:**
+> **With the first version 2.0, do not rename webui with webui2 in your broker configuration file! Some side effects may exist with some Shinken daemons :/P It also may be mandatory to remove the old `/var/lib/shinken/modules/webui` directory to avoid confusing the main broker ...**
+
