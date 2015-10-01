@@ -42,7 +42,7 @@
 [conf-users]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---WebUI-Users 
 [conf-hostview]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---custom-host-view
 [conf-worldmap]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---Worldmap
-[conf-element]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---Element view
+[conf-element]: https://github.com/shinken-monitoring/mod-webui/wiki/Configuration---Element-view
 [development]: https://github.com/shinken-monitoring/mod-webui/wiki/Development
 [dev-design]: https://github.com/shinken-monitoring/mod-webui/wiki/Design
 [dev-contributing]: https://github.com/shinken-monitoring/mod-webui/wiki/Contributing
