@@ -14,6 +14,7 @@
  - [Web UI users][conf-users]
  - [Custom host view][conf-hostview]
  - [Worldmap plugin][conf-worldmap]
+ - [Host/service view][conf-element]
 
 * [User manual][usermanual]
  - [Dashboard][user-dashboard]
