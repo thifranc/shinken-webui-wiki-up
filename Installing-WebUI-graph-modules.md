@@ -30,7 +30,7 @@ define module {
                                                         ; changed by your broker hostname
 }
 
-$ cat /etc/shinken/modules/webui.cfg
+$ cat /etc/shinken/modules/webui2.cfg
 [...]
 modules     ui-pnp
 [...]
@@ -88,7 +88,7 @@ define module {
     graphite_data_source    shinken
 }
 
-$ cat /etc/shinken/modules/webui.cfg
+$ cat /etc/shinken/modules/webui2.cfg
 [...]
 modules     ui-graphite
 [...]
