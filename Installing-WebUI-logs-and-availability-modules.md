@@ -24,6 +24,10 @@ On Redhat/Centos:
 Please note that the default parameters do not need to be modified.
 
 ```
+   # Mongodb parameters for internal Web UI modules
+   # NOTE: Do not change these parameters unless you are using the 'mongo-logs' module
+   # with different parameters than the default ones.
+
    # Database URI
    #uri                        mongodb://localhost
 
