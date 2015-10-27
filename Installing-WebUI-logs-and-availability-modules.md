@@ -7,9 +7,9 @@ By default, a mongodb module is embedded in the WebUI (you don't need to install
 
 ## Mongo-logs
 
-**TODO** : Document the installation of the broker module.
+This module is embedded in the WebUI. You **must not declare** this module in the `webui2.cfg` file or it will break things in the WebUI (such as login ...).
 
-This module is embedded in the WebUI. You only need to install mongodb:
+You only need to install mongodb:
 
 On Debian/Ubuntu
 ```
@@ -21,9 +21,27 @@ On Redhat/Centos:
 
 ### Configuration
 
-Please note that default parameters do not need to be modified.
+Please note that the default parameters do not need to be modified.
 
 ```
-uri             mongodb://localhost/?safe=false
-database        shinken
+   # Database URI
+   #uri                        mongodb://localhost
+
+   # If you are running a MongoDB cluster (called a “replica set” in MongoDB),
+   # you need to specify it's name here.
+   # With this option set, you can also write the mongodb_uri as a comma-separated
+   # list of host:port items. (But one is enough, it will be used as a “seed”)
+   #replica_set
+
+   # Database name where to fetch the logs/availability collections
+   #database                   shinken
+   # User authentication for database access
+   #username
+   #password
+
+   # Logs collection name
+   #logs_collection            logs
+
+   # Hosts availability collection name
+   #hav_collection             availability
 ```
