@@ -43,8 +43,9 @@ Shinken will automatically replace YOURSERVERNAME with the broker hostname at ru
 
 ## Graphite graphs
 
-You can ask for Graphite graphs with the `ui-graphite2` module.
+You can view Graphite graphs with the `ui-graphite2` module.
 
+**Note**: to feed your Graphite with metrics data you should have installed the `graphite2` module in Shinken. To proceed, see: https://github.com/shinken-monitoring/mod-graphite/tree/refactored
 
 How to install:
 ```
