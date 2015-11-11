@@ -5,6 +5,9 @@ The easiest solution to set up the Shinken WebUI is to use the CLI *shinken inst
 * Install the WebUI
 ```
 # Log in with your shinken user account ...
+$ su - shinken
+
+# Install package ...
 $ shinken install webui2
 ```
 
@@ -46,8 +49,21 @@ Despite the WebUI is fully operational out of the box, you may want to look how 
 
 ## Updating from previous installation
 
-If you are updating from previous installation, you should consider getting the new webui2.cfg file and change its content to adapt to your configuration. Default `webui2.cfg` is available here: https://github.com/shinken-monitoring/mod-webui/blob/master/etc/modules/webui2.cfg
+**Note:** do not forget to save your `webui2.cfg` configuration file before installing the new version!
 
+```
+# Log in with your shinken user account ...
+$ su - shinken
+
+# Save previous configuration ...
+$ cp /etc/shinken/modules/webui2.cfg /etc/shinken/modules/webui2.bak
+
+# Install update package ...
+$ shinken install webui2
+
+# Restore previous configuration ...
+$ cp /etc/shinken/modules/webui2.bak /etc/shinken/modules/webui2.cfg
+```
 
 ## Expert install: from the Github repository
 
