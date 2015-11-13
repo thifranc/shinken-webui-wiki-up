@@ -3,6 +3,8 @@
 
 * [Upgrading from the old WebUI][upgrade]
 
+* [Using a frontend Web server][server]
+
 * [Installing][installing]
  - [Authentication modules][ins-authenticating]
  - [Storage modules][ins-storing]
@@ -31,6 +33,7 @@
 
 [home]: https://github.com/shinken-monitoring/mod-webui/wiki/Home
 [upgrade]: https://github.com/shinken-monitoring/mod-webui/wiki/Upgrade-from-WebUI-v1
+[server]: https://github.com/shinken-monitoring/mod-webui/wiki/Frontend-Web-server
 [installing]: https://github.com/shinken-monitoring/mod-webui/wiki/Installation
 [ins-main]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-Shinken-WebUI
 [ins-authenticating]: https://github.com/shinken-monitoring/mod-webui/wiki/Installing-WebUI-authentication-modules
