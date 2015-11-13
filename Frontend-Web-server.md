@@ -1,4 +1,5 @@
-# Standalone Web UI
+#  Standalone Web UI
+
 The Web UI embeds its own Web server [Python Bottle](http://bottlepy.org/docs/dev/index.html). This built-in non-threading HTTP server is based on wsgiref WSGIServer may become a performance bottleneck when server load increases. It is recommended, at least, to install an alternative multi-threaded server like [CherryPy](http://www.cherrypy.org/) which is also recommended as a dependency for the Shinken framework.
 
 A simple installation of the Python package is enough and no extra-configuration is necessary fot CherryPy to be used as a backend server for the Web UI.
@@ -17,7 +18,7 @@ Using a reverse proxy server as a frontend for the Web UI allows to improve perf
 
    # Create and activate a new virtual host
    vi /etc/nginx/sites-available/shinken
-   => See belon for file content ...
+   => See below for file content ... choose HTTP or HTTPS configuration file.
 
    # Activate the new virtual host
    ln -s /etc/nginx/sites-available/shinken /etc/nginx/site-enabled/shinken
