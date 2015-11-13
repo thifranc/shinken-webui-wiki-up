@@ -48,6 +48,14 @@ server {
         return 200 "User-agent: *\nDisallow: /";
     }
 
+    # Serve static content directly
+    location /static/(.*\/)? {
+        try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
+    }
+    location @webui {
+        root /var/lib/shinken/modules/webui/;
+    }
+
     # Redirection
     location / {
         # Set the adequate variables so that the WebUI will
@@ -60,14 +68,8 @@ server {
         # Replace 7767 (default) by the port your shinken WebUI is listening on.
         proxy_pass http://localhost:7767;
         proxy_read_timeout  60;
-    }
 
-    # Serve static content directly
-    location /static/(.*\/)? {
-        try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
-    }
-    location @webui {
-        root /var/lib/shinken/modules/webui/;
+        proxy_redirect http://localhost:7767 http://shinkenmain:80;
     }
 }
 ```
@@ -97,6 +99,14 @@ server {
         return 200 "User-agent: *\nDisallow: /";
     }
 
+    # Serve static content directly
+    location /static/(.*\/)? {
+        try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
+    }
+    location @webui {
+        root /var/lib/shinken/modules/webui/;
+    }
+
     # Redirection
     location / {
         # Set the adequate variables so that the WebUI will
@@ -109,14 +119,8 @@ server {
         # Replace 7767 (default) by the port your shinken WebUI is listening on.
         proxy_pass http://localhost:7767;
         proxy_read_timeout  60;
-    }
 
-    # Serve static content directly
-    location /static/(.*\/)? {
-        try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
-    }
-    location @webui {
-        root /var/lib/shinken/modules/webui/;
+        proxy_redirect http://localhost:7767 https://shinkenmain:443;
     }
 }
 ```
