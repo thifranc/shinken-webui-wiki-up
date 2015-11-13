@@ -36,7 +36,7 @@ server {
     # IPv4 support
     listen 80;
     # IPv6 support
-    listen [::]:80;
+    #listen [::]:80;
 
     server_name shinken;
 
@@ -83,7 +83,7 @@ server {
     # IPv4 support
     listen 443;
     # IPv6 support
-    listen [::]:443;
+    #listen [::]:443;
 
     server_name shinken;
 
