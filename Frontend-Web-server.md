@@ -28,6 +28,8 @@ Using a reverse proxy server as a frontend for the Web UI allows to improve perf
 ```
 
 ## nginx HTTP configuration
+This configuration file may be used if you need to change the Web UI port (http://shinkenmain).
+
 ```
 # /etc/nginx/sites-available/shinken
 # Shinken WebUI
@@ -75,6 +77,8 @@ server {
 ```
 
 ## nginx HTTPS configuration
+This configuration file may be used if you need to use the Web UI with a secured SSL connection (https://shinkenmain).
+
 ```
 # /etc/nginx/sites-available/shinken_ssl
 # Shinken WebUI
@@ -121,6 +125,62 @@ server {
         proxy_read_timeout  60;
 
         proxy_redirect http://localhost:7767 https://shinkenmain:443;
+    }
+}
+```
+
+
+## nginx HTTP configuration
+This configuration file may be used if you need to change the Web UI port and to relocate the aplication to a sub folder (http://shinkenmain/shinken).
+
+```
+# /etc/nginx/sites-available/shinken
+# Shinken WebUI
+#
+server {
+    # IPv4 support
+    listen 80;
+    # IPv6 support
+    #listen [::]:80;
+    server_name shinkenmain;
+
+    access_log  /var/log/nginx/shinken_sub_access.log;
+    error_log  /var/log/nginx/shinken_sub_error.log;
+
+    # Serve static content directly
+    location /static/(.*\/)? {
+        try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
+    }
+    location @webui {
+        root /var/lib/shinken/modules/webui/;
+    }
+
+    location ~* ^/(all|forms|inner|static|dashboard|availability|logs|widget|cv|user|modal|gotfirstdata|host/cv) {
+        return 301 /shinken$request_uri;
+    }
+
+    location /shinken/ {
+        # Set the variables so that the WebUI will
+        # know what hostname it has, this is useful for redirects
+        proxy_set_header   X-NginX-Proxy true;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   Host      $http_host;
+        #proxy_set_header   Host      $host;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+
+
+        # Replace 7767 (default) by the port your shinken webui is listening on
+        proxy_pass http://localhost:7767/;
+        proxy_redirect default;
+
+        # Sub_filter all the occurrences of the page
+        sub_filter_once off;
+
+        # All patterns that should be rewritten
+        sub_filter "href=\"/" "href=\"/shinken/";
+        sub_filter "=\"/static" "=\"/shinken/static";
+        sub_filter "=\"/" "=\"/shinken/";
     }
 }
 ```
