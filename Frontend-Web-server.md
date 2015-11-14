@@ -130,7 +130,7 @@ server {
 ```
 
 
-## nginx HTTP configuration
+## nginx HTTP configuration, relocate in sub folder
 This configuration file may be used if you need to change the Web UI port and to relocate the aplication to a sub folder (http://shinkenmain/shinken).
 
 ```
