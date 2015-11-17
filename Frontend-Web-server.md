@@ -133,6 +133,8 @@ server {
 ## nginx HTTP configuration, relocate in sub folder
 This configuration file may be used if you need to change the Web UI port and to relocate the aplication to a sub folder (http://shinkenmain/shinken).
 
+**Note:** This configuration requires a recent version of nginx (min. 1.9.4). You will probably need to install the nginx-full package from the jessie-backport repositories, or follow [this tutorial on nginx site](https://www.nginx.com/resources/wiki/start/topics/tutorials/install/).
+
 ```
 # /etc/nginx/sites-available/shinken
 # Shinken WebUI
