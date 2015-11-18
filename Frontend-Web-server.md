@@ -55,7 +55,7 @@ server {
         try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
     }
     location @webui {
-        root /var/lib/shinken/modules/webui/;
+        root /var/lib/shinken/modules/webui2/;
     }
 
     # Redirection
@@ -108,7 +108,7 @@ server {
         try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
     }
     location @webui {
-        root /var/lib/shinken/modules/webui/;
+        root /var/lib/shinken/modules/webui2/;
     }
 
     # Redirection
@@ -154,7 +154,7 @@ server {
         try_files htdocs/$uri plugins/$1/htdocs/$uri @webui;
     }
     location @webui {
-        root /var/lib/shinken/modules/webui/;
+        root /var/lib/shinken/modules/webui2/;
     }
 
     location ~* ^/(all|forms|inner|static|dashboard|availability|logs|widget|cv|user|modal|gotfirstdata|host/cv) {
