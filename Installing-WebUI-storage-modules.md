@@ -6,16 +6,19 @@ By default, a mongodb module is embedded in the WebUI (you don't need to install
 
 ## Mongodb
 
-This module is now embedded in the WebUI. You only need to install mongodb:
+This module is now embedded in the WebUI. You only need to install MongoDB. 
+
+*More information [here](https://docs.mongodb.org/getting-started/shell/tutorial/install-on-linux/) for installing MongoDB Community edition on Linux distros.*
+
 
 On Debian/Ubuntu
 ```
-$ sudo apt-get install mongodb
+$ sudo apt-get install mongodb-org
 ```
 
 On Redhat/Centos:
 ```
-$ sudo yum install mongodb
+$ sudo yum install mongodb-org
 ```
 
 ### Configuration
