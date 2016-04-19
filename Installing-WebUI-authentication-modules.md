@@ -2,8 +2,8 @@ The WebUI can use external modules to check user/password before allowing access
 
 The user authentication is made by the WebUI login process in the following order: 
 - first, tries to authenticate the user with the extra modules defined in its configuration
-- then, tries the *Contact file* embedded authentication
-- last, tries the *htpasswd file* embedded authentication
+- then, tries the *htpasswd file* embedded authentication
+- last, tries the *Contact file* embedded authentication
 
 > You can use as many authentication modules as you want. For instance, you can combine the default config file authentication with an active directory.
 
