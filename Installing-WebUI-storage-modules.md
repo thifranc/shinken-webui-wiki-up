@@ -26,8 +26,11 @@ $ sudo yum install mongodb-org
 Please note that default parameters do not need to be modified.
 
 ```
-uri             mongodb://localhost/?safe=false
-database        shinken
+$ cat /etc/shinken/modules/webui2.cfg
+[...]
+
+   uri             mongodb://localhost/?safe=false
+   database        shinken
 ```
 
 ## SQLite
