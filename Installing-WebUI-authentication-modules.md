@@ -40,7 +40,7 @@ Check that the owner of the file is the defined Shinken user and that this file 
 
 How to configure:
 ```
-$ cat /etc/shinken/modules/webui.cfg
+$ cat /etc/shinken/modules/webui2.cfg
 [...]
 
    
@@ -123,7 +123,7 @@ define module {
     uri             http://glpi085/glpi/plugins/webservices/xmlrpc.php
 }
 
-$ cat /etc/shinken/modules/webui.cfg
+$ cat /etc/shinken/modules/webui2.cfg
 [...]
 modules     auth-ws-glpi
 [...]
