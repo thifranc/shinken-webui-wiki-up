@@ -1,5 +1,13 @@
 # Shinken Web User Interface
 
+## Important information
+
+As you may have noticed, the activity on the Shinken framework is very low since several months :/ Because of these, I do not want to invest more effort for releasing new Web UI versions. I had to take this decision because, for my own needs, I decided to migrate to another monitoring framework.
+ 
+ As of today, I realize that I do not have enough time to maintain the Shinken WebUI with an aceceptable quality. Hence, I prefer to abandon the maintenance of this project. I am sincerely sorry for the inconvenience this may cause to you.
+
+
+
 *Please note that the screen captures used to illustrate some pages are not up to date with the most recent version!*
 
 Shinken provides a self sufficient Web User Interface, which includes its own web server (No need to setup any other Web server). The WebUI is built with the most recent Javascript Bootstrap 3 library as to deliver a user interface compatible with a wide range of Web browsers.
