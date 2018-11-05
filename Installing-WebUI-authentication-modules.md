@@ -86,6 +86,26 @@ Change “adserver” by your own dc server, and set the “user/password” to 
 
 Change “mode” from “ad” to “openldap” to make the module ready to authenticate against an OpenLDAP directory service.
 
+WARNING : Be aware that you'll also need a contact file in order for your auth to work.
+
+For example, if you have on your AD or LDAP the following credentials :
+```
+login : corentin
+password : secret
+```
+
+Then you'll need to have a contact card like the following :
+```
+define contact{
+    use             generic-contact
+    contact_name    corentin
+    contactgroups   admin,users
+    email           shinken@localhost
+    pager           0000000000  ; contact phone number
+    is_admin        1
+    expert	    1
+}
+```
 
 ## Glpi user - (auth-ws-glpi)
 
